@@ -5,10 +5,9 @@
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <script>
-        // UNCOMMENT AND SUET YOUR VARIABLES FOR DISQUS AND GOOGLE ANALYTICS
-        // var d_id  = 'adasdaasd',
-        //     g_id  = '12420899-1', // Format: ########-#, Example: 11220899-1
-        //     g_url = 'yoursite.com' // Format: #####.####, Example: webdesignporto.com
+        var d_id  = 'dumpcore',
+            g_id  = '48709623-1', // Format: ########-#, Example: 11220899-1
+            g_url = 'dumpcore.io' // Format: #####.####, Example: webdesignporto.com
     </script>
 	
     {{! Page Meta }}
@@ -59,36 +58,36 @@
     </script>
 
     <!-- Automatic facebook like, share and comment plugin -->
-    <script type="text/javascript">
-        var currentUrl = document.URL;
-        var getUrl = function(forWhat){
-            var url;
-            if(forWhat === 'page'){
-                url = document.URL;
-            }else if(forWhat === 'site'){
-                url = '{{@blog.url}}';
-            }
-            // required in order to like button to show up on localhost
-            if(url.indexOf('localhost') > -1){
-                url = 'http://google.com';
-            }
-            return url;
-        }
-
-        var getLikePlugin = function(forWhat){
-            return $('<div class="fb-like" data-href="'+getUrl(forWhat)+'" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>')
-        }
-        var getCommentPlugin = function(forWhat){
-            return $('<h3 id="comments">Your word now</h3><div class="fb-comments" data-href="'+getUrl(forWhat)+'" data-numposts="10" data-colorscheme="light"></div>');
-        }
-        // like button on the footer in every page
-        $('body > footer').prepend(getLikePlugin('site'));
-
-        if($('body').hasClass('post-template')){
-            // like and comments on every post, at the end of the post
-            getLikePlugin('page').insertBefore($('article > #disqus_thread'))
-            getCommentPlugin('page').insertBefore($('article > #disqus_thread'))
-        }
-    </script>
+<!--     <script type="text/javascript"> -->
+<!--         var currentUrl = document.URL; -->
+<!--         var getUrl = function(forWhat){ -->
+<!--             var url; -->
+<!--             if(forWhat === 'page'){ -->
+<!--                 url = document.URL; -->
+<!--             }else if(forWhat === 'site'){ -->
+<!--                 url = '{{@blog.url}}'; -->
+<!--             } -->
+<!--             // required in order to like button to show up on localhost -->
+<!--             if(url.indexOf('localhost') > &#45;1){ -->
+<!--                 url = 'http://google.com'; -->
+<!--             } -->
+<!--             return url; -->
+<!--         } -->
+<!--  -->
+<!--         var getLikePlugin = function(forWhat){ -->
+<!--             return $('<div class="fb&#45;like" data&#45;href="'+getUrl(forWhat)+'" data&#45;layout="standard" data&#45;action="like" data&#45;show&#45;faces="true" data&#45;share="true"></div>') -->
+<!--         } -->
+<!--         var getCommentPlugin = function(forWhat){ -->
+<!--             return $('<h3 id="comments">Your word now</h3><div class="fb&#45;comments" data&#45;href="'+getUrl(forWhat)+'" data&#45;numposts="10" data&#45;colorscheme="light"></div>'); -->
+<!--         } -->
+<!--         // like button on the footer in every page -->
+<!--         $('body > footer').prepend(getLikePlugin('site')); -->
+<!--  -->
+<!--         if($('body').hasClass('post&#45;template')){ -->
+<!--             // like and comments on every post, at the end of the post -->
+<!--             getLikePlugin('page').insertBefore($('article > #disqus_thread')) -->
+<!--             getCommentPlugin('page').insertBefore($('article > #disqus_thread')) -->
+<!--         } -->
+<!--     </script> -->
 </body>
 </html>
