@@ -27,6 +27,21 @@ module.exports = function(grunt) {
       },
       combinejs: {
         files: {
+          '../assets/js/all.min.js':
+          [
+          'bower_components/modernizr/modernizr.js',
+          'custom_components/responsive_iframes/responsive_iframes.js',
+          'custom_components/magnum.js'
+          ]
+        }
+      }
+    },
+    uglify_install: {
+      options: {
+        mangle: false
+      },
+      combinejs: {
+        files: {
           '<%= ghost_location %>content/themes/<%= ghost_theme_name %>/assets/js/all.min.js':
           [
           'bower_components/modernizr/modernizr.js',
@@ -53,6 +68,14 @@ module.exports = function(grunt) {
     },
 
     cssmin: {
+      combine: {
+        files: {
+          '../assets/css/style.css': ['bower_components/normalize-css/normalize.css', 'compiled_css/compiled_css.css']
+        }
+      }
+    },
+
+    cssmin_install: {
       combine: {
         files: {
           '<%= ghost_location %>content/themes/<%= ghost_theme_name %>/assets/css/style.css': ['bower_components/normalize-css/normalize.css', 'compiled_css/compiled_css.css']
