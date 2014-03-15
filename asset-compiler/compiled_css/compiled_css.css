@@ -64,7 +64,6 @@ ol.linenums {
 /* IE indents via margin-left */
 /* Alternate shading for lines */
 li:before {
-  content: " ";
   margin-left: -5px;
 }
 @media print {
